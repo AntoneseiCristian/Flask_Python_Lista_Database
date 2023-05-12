@@ -1,26 +1,25 @@
-_id: req_e8a38c68425b4c53bb1ab8bb92c32679
+_id: req_c77f28b60c914360b7544912bd88382c
 type: Request
 parentId: fld_24bef12a95ef47b18b51759925d29d1d
-modified: 1683891211062
-created: 1683878393907
-url: http://127.0.0.1:5000/produs
-name: Adauga produse in magazin
+modified: 1683891223206
+created: 1683888779421
+url: http://127.0.0.1:5000/produs/369b1cc33d0045be83af73f8547164c9
+name: Update produs cu id = ""
 description: ""
-method: POST
+method: PUT
 body:
   mimeType: application/json
   text: |-
     {
-    	"nume": "cartdse",
-    	"pret": 18,
-    	"magazin_id": "753ed1f4853e49a69cf5cc06c97d2ec3"
+    	"nume": "scaun",
+    	"pret": 29
     }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
 authentication: {}
-metaSortKey: -1683888881455
+metaSortKey: -1683888779421
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

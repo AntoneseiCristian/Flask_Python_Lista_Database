@@ -1,17 +1,17 @@
-_id: req_c50b65b159554ad798641cdaf0beae39
+_id: req_641c918f9dca4dbe9eff5d260e75fe29
 type: Request
 parentId: fld_24bef12a95ef47b18b51759925d29d1d
-modified: 1683891099739
-created: 1683888523650
-url: http://127.0.0.1:5000/produs/01b949f9a46c454485e88bc7301e5666
-name: Sterge produsul cu id = ""
+modified: 1683890865053
+created: 1683888983489
+url: http://127.0.0.1:5000/produs
+name: Afiseaza toate produsele
 description: ""
-method: DELETE
+method: GET
 body: {}
 parameters: []
 headers: []
 authentication: {}
-metaSortKey: -1683888523650
+metaSortKey: -1683888983489
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

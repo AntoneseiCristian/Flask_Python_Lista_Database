@@ -1,17 +1,17 @@
-_id: req_c50b65b159554ad798641cdaf0beae39
+_id: req_89727e899b884b90843ca833c4503a62
 type: Request
-parentId: fld_24bef12a95ef47b18b51759925d29d1d
-modified: 1683891099739
-created: 1683888523650
-url: http://127.0.0.1:5000/produs/01b949f9a46c454485e88bc7301e5666
-name: Sterge produsul cu id = ""
+parentId: fld_67ad23774d7842538d097723598cc471
+modified: 1683890488986
+created: 1683888904488
+url: http://127.0.0.1:5000/lant_de_magazine/b044b88a310a4cb9ad2fe4c149b69493
+name: Sterge un magazin
 description: ""
 method: DELETE
 body: {}
 parameters: []
 headers: []
 authentication: {}
-metaSortKey: -1683888523650
+metaSortKey: -1683887899555
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
