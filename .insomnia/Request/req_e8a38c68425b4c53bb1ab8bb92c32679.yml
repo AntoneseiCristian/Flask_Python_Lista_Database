@@ -1,0 +1,30 @@
+_id: req_e8a38c68425b4c53bb1ab8bb92c32679
+type: Request
+parentId: wrk_e9dc2c79a16542b681b6d661d3f07ef1
+modified: 1683879898496
+created: 1683878393907
+url: http://127.0.0.1:5000/produse
+name: New Request
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"nume": "carte",
+    	"pret": "18",
+    	"magazin_id": "56384ef22b4d45ac9cdf3930f5d68bef"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1683878393907
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
