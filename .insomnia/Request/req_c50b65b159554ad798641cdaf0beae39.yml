@@ -1,0 +1,21 @@
+_id: req_c50b65b159554ad798641cdaf0beae39
+type: Request
+parentId: fld_24bef12a95ef47b18b51759925d29d1d
+modified: 1683888616723
+created: 1683888523650
+url: http://127.0.0.1:5000/produse/ITEM_ID
+name: Sterge produsul cu id =
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1683888523650
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

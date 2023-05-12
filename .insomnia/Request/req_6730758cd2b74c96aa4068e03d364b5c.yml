@@ -1,17 +1,17 @@
 _id: req_6730758cd2b74c96aa4068e03d364b5c
 type: Request
-parentId: wrk_e9dc2c79a16542b681b6d661d3f07ef1
-modified: 1683879674542
+parentId: fld_67ad23774d7842538d097723598cc471
+modified: 1683888490187
 created: 1683879605579
-url: http://127.0.0.1:5000/lant_de_magazine/56384ef22b4d45ac9cdf3930f5d68bef
-name: New Request
+url: http://127.0.0.1:5000/lant_de_magazine/f254a70a3ce04b90bceaca5749403d7c
+name: Afiseaza nume magazin dupa ID
 description: ""
 method: GET
 body: {}
 parameters: []
 headers: []
 authentication: {}
-metaSortKey: -1683879605579
+metaSortKey: -1683887899605
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
