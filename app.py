@@ -26,6 +26,11 @@ def creare_produs(): #creeaza un produs nou intr-un magazin
     "magazin_id" not in produs_data or
     "nume" not in produs_data):
         abort(400, message = "Asigura-te ca 'pret', 'magazin id' si 'nume' sunt incluse in requestul JSON" )
+    for produs in produse.values():
+        if(produs_data["nume"] == produs["nume"]) and (produs_data["magazin_id"] == produs["magazin_id"]):
+            abort(400, message= f"Produsl exista deja")
+
+
     if produs_data["magazin_id"] not in lant_de_magazine:
         abort(404, message = "Magazinul nu a fost gasit")
 
@@ -47,9 +52,41 @@ def afiseaza_nume_magazin(store_id):
         abort(404, message = "Magazinul nu a fost gasit")
 
 
-@app.get("/produse/<string:produs_id>")
+@app.get("/produs/<string:produs_id>")
 def afiseaza_produsele_din_magazin(produs_id):
     try:
         return produse[produs_id]
     except KeyError:
         abort(404, message = "Produsul nu a fost gasit")
+
+
+@app.delete("/produs/<string:produs_id>")
+def sterge_produsul_din_magazin(produs_id):
+    try:
+        del produse[produs_id]
+        return {"message": "Produsul a fost sters"}
+    except KeyError:
+        abort(404, message = "Produsul nu a fost gasit")
+
+@app.put("/produs/<string:produs_id>")
+def update_produs(produs_id):
+    produs_data = request.get_json()
+    if ("pret" not in produs_data or
+            "nume" not in produs_data):
+        abort(400, message="Asigura-te ca 'pret' si 'nume' sunt incluse in requestul JSON")
+    try:
+        produs = produse[produs_id]
+        produs |= produs_data
+
+        return produs
+    except KeyError:
+        abort(404, message = "Produsul nu a fost gasit")
+
+
+@app.delete("/lant_de_magazine/<string:magazin_id>")
+def sterge_magazinul(magazin_id):
+    try:
+        del lant_de_magazine[magazin_id]
+        return {"message": "Magazinul a fost sters"}
+    except KeyError:
+        abort(404, message = "Magazinul nu a fost gasit")
