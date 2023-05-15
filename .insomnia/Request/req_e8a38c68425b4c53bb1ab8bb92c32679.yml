@@ -1,9 +1,9 @@
 _id: req_e8a38c68425b4c53bb1ab8bb92c32679
 type: Request
 parentId: fld_24bef12a95ef47b18b51759925d29d1d
-modified: 1683891211062
+modified: 1684160240531
 created: 1683878393907
-url: http://127.0.0.1:5000/produs
+url: "{{url}}/produs"
 name: Adauga produse in magazin
 description: ""
 method: POST
@@ -11,9 +11,9 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"nume": "cartdse",
+    	"nume": "carte",
     	"pret": 18,
-    	"magazin_id": "753ed1f4853e49a69cf5cc06c97d2ec3"
+    	"magazin_id": "55852d0e0ed349e190fd1474c4c3d910"
     }
 parameters: []
 headers:

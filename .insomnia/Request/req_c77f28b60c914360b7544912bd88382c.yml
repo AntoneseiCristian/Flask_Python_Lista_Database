@@ -1,9 +1,9 @@
 _id: req_c77f28b60c914360b7544912bd88382c
 type: Request
 parentId: fld_24bef12a95ef47b18b51759925d29d1d
-modified: 1683891223206
+modified: 1684092175565
 created: 1683888779421
-url: http://127.0.0.1:5000/produs/369b1cc33d0045be83af73f8547164c9
+url: "{{url}}/produs/2a8ae178c49744bab9ba89e33c20942e"
 name: Update produs cu id = ""
 description: ""
 method: PUT

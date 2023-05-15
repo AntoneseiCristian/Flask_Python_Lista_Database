@@ -1,9 +1,9 @@
 _id: req_c50b65b159554ad798641cdaf0beae39
 type: Request
 parentId: fld_24bef12a95ef47b18b51759925d29d1d
-modified: 1683891099739
+modified: 1684160291950
 created: 1683888523650
-url: http://127.0.0.1:5000/produs/01b949f9a46c454485e88bc7301e5666
+url: "{{url}}/produs/8a216f7f6a21492ca7d13dbd7631c094"
 name: Sterge produsul cu id = ""
 description: ""
 method: DELETE

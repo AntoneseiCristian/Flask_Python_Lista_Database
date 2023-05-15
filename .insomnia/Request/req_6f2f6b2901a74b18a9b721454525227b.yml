@@ -1,9 +1,9 @@
 _id: req_6f2f6b2901a74b18a9b721454525227b
 type: Request
 parentId: fld_24bef12a95ef47b18b51759925d29d1d
-modified: 1683890995268
+modified: 1684160283804
 created: 1683889008985
-url: http://127.0.0.1:5000/produs/01b949f9a46c454485e88bc7301e5666
+url: "{{url}}/produs/8a216f7f6a21492ca7d13dbd7631c094"
 name: Afiseaza un produs dupa id= ""
 description: ""
 method: GET
