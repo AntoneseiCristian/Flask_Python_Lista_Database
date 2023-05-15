@@ -3,11 +3,13 @@ from flask.views import MethodView
 from flask import request
 from flask_smorest import Blueprint, abort
 from db import produse
+from schemas import ProdusSchema, UpdateProdusSchema
 
 blp = Blueprint("Produse", __name__, description="Operatiuni pe produse")
 
 @blp.route("/produs/<string:produs_id>")
 class Produs(MethodView):
+    @blp.response(200, ProdusSchema)
     def get(self, produs_id):
         try:
             return produse[produs_id]
@@ -21,11 +23,9 @@ class Produs(MethodView):
             except KeyError:
                 abort(404, message="Produsul nu a fost gasit")
 
-    def put(self, produs_id):
-        produs_data = request.get_json()
-        if ("pret" not in produs_data or
-                "nume" not in produs_data):
-            abort(400, message="Asigura-te ca 'pret' si 'nume' sunt incluse in requestul JSON")
+    @blp.arguments(UpdateProdusSchema)
+    @blp.response(200, ProdusSchema)
+    def put(self, produs_data, produs_id):
         try:
             produs = produse[produs_id]
             produs |= produs_data
@@ -36,15 +36,12 @@ class Produs(MethodView):
 
 @blp.route("/produs")
 class ItemList(MethodView):
+    @blp.response(200, ProdusSchema(many=True))
     def get(self):
-        return {"produse": list(produse.values())}
-
-    def post(self):
-        produs_data = request.get_json()
-        if ("pret" not in produs_data or
-                "magazin_id" not in produs_data or
-                "nume" not in produs_data):
-            abort(400, message="Asigura-te ca 'pret', 'magazin id' si 'nume' sunt incluse in requestul JSON")
+        return produse.values()
+    @blp.arguments(ProdusSchema)
+    @blp.response(201, ProdusSchema)
+    def post(self, produs_data):
         for produs in produse.values():
             if (produs_data["nume"] == produs["nume"]) and (produs_data["magazin_id"] == produs["magazin_id"]):
                 abort(400, message=f"Produsl exista deja")
@@ -54,4 +51,3 @@ class ItemList(MethodView):
         produse[produs_id] = produs_nou
 
         return produs_nou, 201
-

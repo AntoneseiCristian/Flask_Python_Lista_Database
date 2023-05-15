@@ -6,7 +6,7 @@ class ProdusSchema(Schema):
     pret = fields.Float(required=True)
     magazin_id = fields.Str(required=True)
 
-class ProdusSchema(Schema):
+class UpdateProdusSchema(Schema):
     nume = fields.Str(required=True)
     pret = fields.Float(required=True)
 
